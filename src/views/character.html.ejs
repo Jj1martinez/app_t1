@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= data.name%></title>
+</head>
+<body>
+    <div class="episode">
+        <div class="box">
+                <img src="<%=data.image%>" alt="">
+        </div> 
+        <div class="box">
+                <h1><%= data.name%></h1>
+                <h2> ID: <%= data.id%></h2>
+                <h2> State: <%= data.status%></h2>
+                <h2> Specie: <%= data.species%></h2>
+                <h2> Type: <%= data.type%></h2>
+                <h2> Gender: <%= data.gender%></h2>
+                <%if (origin[0]=='0') {%>
+                    <h2>Origin:  <%= data.origin.name%> </h2>
+                <%} else {%>
+                    <h2>Origin: <a href="/place/<%= origin[0]%> "> <%= data.origin.name%></a>  </h2>
+                <%}%>
+            
+                <h2>Location: <a href="/place/<%= location[0]%> "> <%= data.location.name%></a> </h2>
+        </div>
+        <div class="box">
+                <h1>Appearences</h1>
+                <ul>   
+                        <%episodes.forEach(i =>{ %>
+                            <li><a href="/episode/<%= i.id %>"><%= i.name%></a></li>
+                            <% })%>
+                </ul>
+        </div>
+    </div>
+    
+    
+    
+</body>
+</html>

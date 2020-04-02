@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Rick & Morty App</title>
+    
+  </head>
+  <body>
+      <header id="header" class="skel-layers-fixed">
+      </header>
+      <div class="index">
+        <h1>Chapters</h1>
+        <div class="table">
+          <table >
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Code</th>
+                <th>Air Date</th>
+              </tr>
+              <%data.results.forEach(i =>{ %>
+              <tr>
+                <th><%= i.id %></th>
+                <th><a href="/episode/<%= i.id %>"><%= i.name   %></a></th>
+                <th><%= i.episode %></th>
+                <th><%= i.air_date   %></th>
+              </tr>
+              <% })%>
+          </table>
+        </div>
+      </div>
+
+  </body>
+</html>

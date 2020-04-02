@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+<body>  <div class="episode">
+                <div class="box">
+                        <h1><%= data.name%></h1>
+                        <h2> ID: <%= data.id%></h2>
+                        <h2> Dimension: <%= data.dimension%></h2>
+                        <h2> Type: <%= data.type%></h2>
+                </div> 
+                <div class="box">
+                        <h2>Residents: </h2>
+                        <ul>
+                                <%characters.forEach(i =>{ %>
+                                <li><a href="/character/<%= i.id %>"><%= i.name%></a></li>
+                                <% })%>
+                        </ul>
+                </div>
+        </div>  
+    
+
+    
+</body>
+</html>

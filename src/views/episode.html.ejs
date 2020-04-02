@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    
+    <title>Rick & Morty App</title>
+
+  </head>
+  <body>
+        <div class="character">
+                <div class="box">
+                        <h1><%= data.name%></h1>
+                        <h2> ID: <%= data.id%></h2>
+                        <h2> Air Date: <%= data.air_date%></h2>
+                        <h2> Episode Code: <%= data.episode%></h2>
+                        <img src="<%=data.image%>" alt="">
+                </div> 
+                <div class="box">
+                        <h2>Characters in this episode</h2>
+                        <ul>
+                                <%characters.forEach(i =>{ %>
+                                <li><a href="/character/<%= i.id %>"><%= i.name%></a></li>
+                                <% })%>
+                        </ul>
+                </div>
+        </div>
+    
+
+    
+</body>
+</html>
