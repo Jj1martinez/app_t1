@@ -3,7 +3,7 @@ const pkg = require('../../package.json');
 const axios = require('axios');
 
 const router = new KoaRouter();
-const url = 'https://rickandmortyapi.com/';
+const url = 'https://integracion-rick-morty-api.herokuapp.com/';
 
 
 router.get('/', async (ctx) => {
