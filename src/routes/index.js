@@ -7,6 +7,7 @@ const url = 'https://integracion-rick-morty-api.herokuapp.com/';
 
 
 router.get('/', async (ctx) => {
+  console.log(ctx)
   var response = await axios.get(url+'api/episode')
   if ((response.data.info.pages)>1) {
     for (let index = 1; index < response.data.info.pages; index++) {
